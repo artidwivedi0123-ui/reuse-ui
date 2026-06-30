@@ -1,0 +1,43 @@
+@use "../../styles/index" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 600;
+}
+
+.required {
+  color: $error-color;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: 0 12px;
+  
+}
+
+.input {
+  @include input-reset;
+  padding: 12px;
+  font-size: $font-small;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  color: $error-color;
+  font-size: $font-small;
+}
+.req {
+  color: $danger-color;
+}

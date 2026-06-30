@@ -1,0 +1,23 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-reset {
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all .3s ease;
+}
+
+@mixin input-reset {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+@mixin disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "reuse-ui",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+        "./style.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5",
+    "react-dom": "^19",
+    "sass": "^1.101.0",
+    "typescript": "^5.9.3",
+    "vite": "^7",
+    "vite-plugin-dts": "^4"
+  },
+  "dependencies": {
+    "react-refresh": "^0.18.0"
+  }
+}

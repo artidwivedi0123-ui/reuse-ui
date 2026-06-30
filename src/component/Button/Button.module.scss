@@ -1,0 +1,48 @@
+@use "../../styles/index" as *;
+
+.button {
+  @include button-reset;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary {
+  background: $primary-color;
+  color: $text-white;
+}
+
+.secondary {
+  background: $secondary-color;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+}
+
+.danger {
+  background: $danger-color;
+  color: $text-white;
+  align-self: flex-end;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid $outline-color;
+  color: $outline-color;
+}
+
+.small {
+  padding: $padding-small;
+}
+
+.medium {
+  padding: $padding-medium;
+}
+
+.large {
+  padding: $padding-large;
+}
+
+.button:disabled {
+  @include disabled;
+}
