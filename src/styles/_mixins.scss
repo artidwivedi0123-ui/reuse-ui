@@ -1,23 +1,163 @@
+@use "./breakpoints" as *;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+
 @mixin button-reset {
   border: none;
+  outline: none;
   cursor: pointer;
   border-radius: 8px;
   transition: all .3s ease;
 }
 
+
 @mixin input-reset {
-  outline: none;
-  border: none;
   width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
 }
+
+@mixin list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+@mixin shadow-sm {
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+
+@mixin shadow-md {
+  box-shadow: 0 4px 8px rgba(0,0,0,.15);
+}
+
+@mixin shadow-lg {
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
 
 @mixin disabled {
   opacity: .6;
   cursor: not-allowed;
+  pointer-events: none;
 }
+
+@mixin hover-lift {
+  transition: .3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+@mixin hover-scale {
+  transition: .3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@mixin clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin multi-line($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+  transition: .3s ease;
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #bdbdbd;
+  }
+}
+
+@mixin xs {
+  @media (max-width: $breakpoint-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (max-width: $breakpoint-xl) {
+    @content;
+  }
+} 

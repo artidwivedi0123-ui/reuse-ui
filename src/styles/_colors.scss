@@ -1,12 +1,80 @@
+/* Branded Color */
+
 $primary-color: #2563eb;
+$primary-light: #60a5fa;
+$primary-dark: #1d4ed8;
+
 $secondary-color: #ffffff;
+$secondary-dark: #f3f4f6;
+
+/* Status  Color */
+
+$success-color: #16a34a;
+$success-light: #dcfce7;
+
 $danger-color: #dc2626;
-$outline-color: #6b7280;
+$danger-light: #fee2e2;
+
+$warning-color: #f59e0b;
+$warning-light: #fef3c7;
+$error-color:#dc2525;
+$info-color: #0ea5e9;
+$info-light: #e0f2fe;
+
+/* Text Color */
 
 $text-white: #ffffff;
+$text-black: #000000;
 $text-dark: #111827;
+$text-gray: #6b7280;
+$text-light: #9ca3af;
 
-$border-color: #d1d5db;
-$error-color: #dc2626;
+/* Background color */
 
 $background-light: #f9fafb;
+$background-white: #ffffff;
+$background-dark: #111827;
+
+$background-primary: #dbeafe;
+$background-success: #dcfce7;
+$background-danger: #fee2e2;
+$background-warning: #fef3c7;
+
+/* Border Colors */
+
+$border-color: #d1d5db;
+$border-light: #e5e7eb;
+$border-dark: #6b7280;
+
+/* Outline  Colors */
+$outline-color: #6b7280;
+$outline-primary: #2563eb;
+$outline-success: #16a34a;
+$outline-danger: #dc2626;
+
+/* Utility Color */
+$black-color: #000000;
+$white-color: #ffffff;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+
+/* Extra Color  */
+$blue-color: #3b82f6;
+$green-color: #22c55e;
+$red-color: #ef4444;
+$yellow-color: #facc15;
+$orange-color: #f97316;
+$purple-color: #8b5cf6;
+$pink-color: #ec4899;
+$teal-color: #14b8a6;
+$cyan-color: #06b6d4;
+$indigo-color: #6366f1;
+$brown-color: #92400e;
+$lime-color: #84cc16;

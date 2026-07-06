@@ -1,0 +1,88 @@
+@use "../../styles/index.scss" as *;
+
+.spinner {
+  @include flex-center;
+  border-radius:$border-radius-md;
+  border-style: solid;
+  animation: spin 0.8s linear infinite;
+  padding:$padding-md;
+  margin:$margin-lg;
+}
+
+/* sizes */
+
+.small {
+  width: 20px;
+  height: 20px;
+  border-width: 5px;
+}
+
+.medium {
+  width: 36px;
+  height: 36px;
+  border-width: 3px;
+}
+
+.large {
+  width: 56px;
+  height: 56px;
+  border-width: 4px;
+}
+
+ /* Variant */
+
+.primary {
+  border-color: $border-color;
+  border-top-color: $primary-color;
+}
+
+.secondary {
+  border-color: $border-color;
+  border-top-color: $secondary-color;
+}
+
+.success {
+  border-color: $border-color;
+  border-top-color: $success-color;
+}
+
+.warning {
+  border-color: $border-color;
+  border-top-color: $warning-color;
+}
+
+.danger {
+  border-color: $border-color;
+  border-top-color: $danger-color;
+}
+
+.dark {
+  border-color: $border-color;
+  border-top-color: $black-color;
+}
+
+.light {
+  border-color: rgba(255,255,255,.3);
+  border-top-color: $text-white;
+}
+
+/* Wrapper */
+
+.wrapper {
+  @include flex-center;
+  width: 100%;
+  padding: 2rem;
+}
+
+
+/* Animation    */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} 

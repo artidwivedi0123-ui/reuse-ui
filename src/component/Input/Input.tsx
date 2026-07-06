@@ -1,58 +1,79 @@
 import styles from "./Input.module.scss";
-import { ReactNode, ChangeEvent } from "react";
+import { ReactNode } from "react";
+
 export interface InputProps {
   type?: React.HTMLInputTypeAttribute;
   value?: string;
   placeholder?: string;
-  name?:string;
+  name?: string;
   label?: string;
+  helperText?: string;
   required?: boolean;
   disabled?: boolean;
   error?: string;
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
-  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-};
+  readOnly?: boolean;
+  autoComplete?: string;
+  autoFocus?: boolean;
+  maxLength?: number;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+}
 
 export default function Input({
   type = "text",
   value,
   placeholder,
+  name,
   label,
+  helperText,
   required,
   disabled,
   error,
   leftIcon,
   rightIcon,
+  readOnly,
+  autoComplete,
+  autoFocus,
+  maxLength,
   onChange,
-  name
 }: InputProps) {
   return (
     <div className={styles.container}>
       {label && (
         <label className={styles.label}>
           {label}
-          <span className={styles.req}>{required && "*"}</span>
+          {required && <span className={styles.required}>*</span>}
         </label>
       )}
 
       <div className={styles.inputWrapper}>
-        {leftIcon}
+        {leftIcon && <span>{leftIcon}</span>}
 
         <input
           className={styles.input}
-          name={name}
           type={type}
           value={value}
+          name={name}
           placeholder={placeholder}
           disabled={disabled}
+          readOnly={readOnly}
+          autoComplete={autoComplete}
+          autoFocus={autoFocus}
+          maxLength={maxLength}
           onChange={onChange}
         />
 
-        {rightIcon}
+        {rightIcon && <span>{rightIcon}</span>}
       </div>
 
-      {error && <p>{error}</p>}
+      {helperText && !error && (
+        <small className={styles.helperText}>{helperText}</small>
+      )}
+
+      {error && (
+        <small className={styles.error}>{error}</small>
+      )}
     </div>
   );
 }

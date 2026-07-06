@@ -5,4 +5,65 @@ $padding-large: 16px 28px;
 $font-small: 14px;
 $font-medium: 16px;
 $font-large: 18px;
-$transition: all .3s ease;
+$transition: all 0.3s ease;
+$border-radius-medium: 20px;
+$border-radius-large: 50%;
+
+/* Margin */
+$margin-small: 8px 16px;
+$margin-medium: 12px 20px;
+$margin-large: 16px 28px;
+
+/* Padding */
+$padding-small: 8px 16px;
+$padding-medium: 12px 20px;
+$padding-large: 16px 28px;
+
+/* Border Radius */
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 12px;
+$radius-xl: 16px;
+
+/* Font Sizes */
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 18px;
+$font-xl: 20px;
+
+/* Shadows */
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+/* Transition */
+$transition: all 0.3s ease;
+
+
+/* Margin Variables */
+$margin-sm:1.1rem;
+$margin-lg:2.3rem;
+$margin-md:1.4rem;
+$margin-xl:3.5rem;
+
+
+/* Padding Variables */
+$padding-sm:1.1rem;
+$padding-lg:2.3rem;
+$padding-md:1.4rem;
+$padding-xl:3.5rem;
+
+
+/* Gap Size */
+$gap-sm:1.2rem;
+$gap-lg:1.7rem;
+$gap-md:1.3rem;
+
+
+/* Border Radius  in $% */
+$border-radius-sm:20%;
+$border-radius-md:50%;
+$border-radius-lg:80%;
+
+

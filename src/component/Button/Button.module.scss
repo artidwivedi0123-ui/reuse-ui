@@ -2,33 +2,63 @@
 
 .button {
   @include button-reset;
-  margin: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 16px 28px;
+  font-size: 16px;
+  gap:1.4rem;
+  
+  @include md {
+    padding: 12px 20px;
+    font-size: 15px;
+  }
+
+  @include sm {
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 .primary {
+  @include  button-reset;
   background: $primary-color;
   color: $text-white;
+
+  @include sm {
+    width: 100%;
+    font-size: 0.8rem;
+  }
 }
 
 .secondary {
+  @include button-reset;
   background: $secondary-color;
   border: 1px solid $primary-color;
   color: $primary-color;
 }
 
+
+.others {
+  @include button-reset;
+  background-color: $lime-color;
+}
+
 .danger {
+  @include button-reset;
   background: $danger-color;
   color: $text-white;
   align-self: flex-end;
 }
 
 .outline {
+  @include button-reset;
   background: transparent;
   border: 1px solid $outline-color;
   color: $outline-color;
+}
+
+.success {
+  @include button-reset;
+  background-color: $green-color;
+  color:$black-color;
 }
 
 .small {
@@ -45,4 +75,7 @@
 
 .button:disabled {
   @include disabled;
+}
+.full_width {
+  width:100%;
 }
