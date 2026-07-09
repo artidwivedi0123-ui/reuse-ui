@@ -1,32 +1,39 @@
-import style  from "./Select.module.scss";
-interface  SelectProps {
-    name:string;
-    value:string;
-    onChange?:(e:React.ChangeEvent<HTMLSelectElement>)=>void;
-    options:{
-        label:string | any;
-        value:string |  number;
-    } [];
-    className:string;
+import styles from "./Select.module.scss";
+
+interface SelectProps {
+  name: string;
+  value?: string;
+  className?: string;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+
+  options: {
+    label: string;
+    value: string | number;
+  }[];
 }
-export default function  Select({
-    name,
-    className,
-    options,
-    value
-}:SelectProps) {
-    return (
-        <div className={style["select-container"]}>
-            <select name={name}
-             value={value}
-              className={className}>
-                <option value="">Select  Options</option>
-                {options.map((opt,index)=>(
-                    <option key={index}>
-                        {`${opt.label}  ${opt.value} `}
-                    </option>
-                ))}
-              </select>
-        </div>
-    )
+
+export default function Select({
+  name,
+  value,
+  options,
+  className,
+  onChange,
+}: SelectProps) {
+  return (
+    <select
+      name={name}
+      value={value}
+      onChange={onChange}
+      className={`${styles.select} ${className ?? ""}`}
+    >
+      {options.map((opt) => (
+        <option
+          key={opt.value}
+          value={opt.value}
+        >
+          {opt.label}
+        </option>
+      ))}
+    </select>
+  );
 }
