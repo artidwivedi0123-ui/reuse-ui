@@ -6,7 +6,7 @@ interface SelectProps {
   className?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 
-  options: {
+  options?: {
     label: string;
     value: string | number;
   }[];
@@ -26,7 +26,7 @@ export default function Select({
       onChange={onChange}
       className={`${styles.select} ${className ?? ""}`}
     >
-      {options.map((opt) => (
+      {options?.map((opt) => (
         <option
           key={opt.value}
           value={opt.value}

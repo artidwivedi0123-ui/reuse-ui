@@ -200,7 +200,7 @@ function ye({
       value: s,
       onChange: r,
       className: `${ie.select} ${l ?? ""}`,
-      children: t.map((c) => /* @__PURE__ */ e(
+      children: t?.map((c) => /* @__PURE__ */ e(
         "option",
         {
           value: c.value,
