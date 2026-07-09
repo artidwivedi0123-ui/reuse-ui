@@ -1,0 +1,7 @@
+@use "../../styles//index.scss" as * ;
+ .select-container {
+    display: flex;
+    flex-direction:  column;
+    margin:1.3rem;
+    padding:1.2rem;
+ }
